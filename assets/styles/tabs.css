@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2c2c2c;
+  --accent-color: #555;
+  --text-color: #f0f0f0;
+  --hover-color: #555;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  overflow: hidden;
+  height:100%;
+  width:100%
+}
+
+#intro-text {
+  margin-top: 100px;
+  margin-left: 20px;
+}
+
+.iframe-container {
+  width: 100%
+}
+
+.iframe-container iframe {
+  display: none;
+}
+
+.iframe-container iframe.active {
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.nav {
+  background-color: var(--secondary-color);
+  padding: 0.2rem 1rem;
+  transition: transform 0.5s ease;
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  z-index: 5;
+  transform: translateX(0);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#open-tabs {
+  padding: 13px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#nav-button {
+  float: left;
+  padding: 13px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#nav-button:hover {
+  background-color: var(--hover-color);
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 80px);
+  border: none;
+  left: 0;
+  top: 80px;
+}
+
+.address-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  border-radius: 50px;
+  padding: 18px;
+  overflow: hidden;
+  width: 85vw;
+  transition: width 0.5s;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.address-bar-input {
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 10 5px;
+  font-size: 16px;
+  position: absolute;
+  overflow: hidden;
+  width: 70vw;
+  transition:
+    opacity 0.5s,
+    width 0.5s;
+}
+
+.address-bar-search-form {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width:95vw;
+  }
+  .address-bar-container {
+    width: 60vw
+  }
+  .address-bar-input {
+    width: 60vw
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .address-bar-container {
+    width: 70vw
+  }
+  .address-bar-input {
+    width: 70vw
+  }
+}

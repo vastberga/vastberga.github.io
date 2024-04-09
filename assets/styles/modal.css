@@ -1,0 +1,74 @@
+#tab-modal {
+  animation: fadeIn 0.5s;
+  display: none;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  padding-top: 65px;
+  background-color: #131313;
+  margin: 20% auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  z-index: 999;
+  width: 75%;
+  margin-bottom: 60px;
+}
+
+.row {
+  margin-top: 50px;
+  margin-right: auto;
+  grid-gap: 2rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  left: 2%;
+  right: 2%;
+}
+.card {
+  opacity: 1;
+  flex-direction: column;
+  transition: 0.3s;
+  border-radius: 30px;
+  width: 190px;
+  height: 190px;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.7);
+  max-height: 100%;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.08),
+    0 17px 50px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.12),
+    0 7px 14px 0 rgba(0, 0, 0, 0.09);
+  transform: scale(1.05);
+}
+
+#close-tabs {
+  position:fixed;
+  top:70px;
+  right:14%;
+  font-size:50px;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+}
+
+#close-tabs:hover {
+  transform: scale(1.1);
+}
